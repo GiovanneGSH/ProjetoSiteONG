@@ -1,0 +1,98 @@
+/* Giovanne Silveira Henrique RGM:47808667 */
+
+:root {
+    --cor-primaria: #0b5394;
+    --cor-primaria-escura: #1c3d5a;
+    --cor-primaria-clara: #c4dcf5;
+    --cor-secundaria: #274e13;
+    --cor-secundaria-clara: #d9ead3;
+    --cor-destaque: #e69138;
+
+    --cor-texto: #333333;
+    --cor-texto-suave: #595959;
+    --cor-fundo-pagina: #f5f5f5;
+    --cor-fundo-branco: #ffffff;
+    --cor-fundo-card: #f9f9f9;
+    --cor-borda: #cccccc;
+    --cor-borda-suave: #e6e6e6;
+
+    --cor-sucesso: #274e13;
+    --cor-sucesso-fundo: #edf7ed;
+    --cor-erro: #cc0000;
+    --cor-erro-fundo: #fdecea;
+    --cor-info: #0b5394;
+    --cor-info-fundo: #e8f1fa;
+
+    --fonte-principal: Arial, Helvetica, sans-serif;
+    --font-xs: 0.75rem;   
+    --font-sm: 0.875rem;  
+    --font-md: 1rem;      
+    --font-lg: 1.25rem;   
+    --font-xl: 1.75rem;   
+    --font-xxl: 2.25rem;  
+
+    --espaco-1: 8px;
+    --espaco-2: 16px;
+    --espaco-3: 24px;
+    --espaco-4: 32px;
+    --espaco-5: 48px;
+    --espaco-6: 64px;
+
+    --raio-borda-sm: 4px;
+    --raio-borda-md: 8px;
+    --sombra-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --sombra-elevada: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --transicao-padrao: 0.25s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    font-size: var(--font-md);
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo-pagina);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: var(--font-xl);
+    color: var(--cor-primaria-escura);
+    margin: 0;
+}
+
+h2 {
+    font-size: var(--font-xl);
+    color: var(--cor-primaria-escura);
+    margin-top: 0;
+    margin-bottom: var(--espaco-2);
+}
+
+h3 {
+    font-size: var(--font-lg);
+    color: var(--cor-secundaria);
+    margin-top: 0;
+    margin-bottom: var(--espaco-1);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--espaco-2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

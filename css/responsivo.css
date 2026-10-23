@@ -1,0 +1,134 @@
+/* Giovanne Silveira Henrique RGM:47808667 */
+@media (min-width: 1400px) {
+    main,
+    .container {
+        max-width: 1280px;
+    }
+
+    h2 {
+        font-size: var(--font-xxl);
+    }
+}
+
+@media (max-width: 1200px) {
+    main {
+        max-width: 960px;
+        margin: var(--espaco-3) var(--espaco-2);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero .col-7,
+    .hero .col-5 {
+        grid-column: span 12;
+    }
+
+    .hero-img {
+        max-height: 360px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho-container {
+        flex-wrap: wrap;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    .navegacao {
+        display: none;
+        width: 100%;
+        padding-top: var(--espaco-2);
+    }
+
+    .navegacao ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--espaco-1);
+    }
+
+    .navegacao a {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu-toggle:checked ~ .navegacao {
+        display: block;
+    }
+
+    .menu-toggle:checked + .menu-hamburguer .hamburguer-linha:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .menu-hamburguer .hamburguer-linha:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-hamburguer .hamburguer-linha:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .dropdown .submenu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid var(--cor-primaria);
+        background-color: rgba(255, 255, 255, 0.6);
+        padding-left: var(--espaco-2);
+        display: flex;
+    }
+
+    .col-6 {
+        grid-column: span 12;
+    }
+
+    main {
+        padding: var(--espaco-3);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: var(--font-lg);
+    }
+
+    h2 {
+        font-size: var(--font-lg);
+    }
+
+    .logo-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    main {
+        margin: var(--espaco-1);
+        padding: var(--espaco-2);
+    }
+
+    .grupo-botoes,
+    .card-rodape,
+    .form-acoes,
+    .modal-rodape {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    button,
+    .btn-primario,
+    .btn-secundario,
+    .btn-destaque {
+        width: 100%;
+    }
+
+    .toast {
+        left: var(--espaco-2);
+        right: var(--espaco-2);
+        bottom: var(--espaco-2);
+        max-width: none;
+    }
+}

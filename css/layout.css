@@ -1,0 +1,139 @@
+/* Giovanne Silveira Henrique RGM:47808667 */
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "cabecalho"
+        "conteudo"
+        "rodape";
+    min-height: 100vh;
+}
+
+header,
+.cabecalho-principal {
+    grid-area: cabecalho;
+    background-color: var(--cor-primaria-clara);
+    padding: var(--espaco-2) var(--espaco-3);
+    border-bottom: 4px solid var(--cor-primaria);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    grid-area: conteudo;
+    width: 100%;
+    max-width: 1140px;
+    margin: var(--espaco-4) auto;
+    padding: var(--espaco-4);
+    background-color: var(--cor-fundo-branco);
+    border-radius: var(--raio-borda-md);
+    box-shadow: var(--sombra-card);
+}
+
+footer,
+.rodape {
+    grid-area: rodape;
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-fundo-branco);
+    text-align: center;
+    padding: var(--espaco-4) var(--espaco-3);
+    margin-top: var(--espaco-4);
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-3);
+}
+
+.col-1  { grid-column: span 1; }
+.col-2  { grid-column: span 2; }
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-5  { grid-column: span 5; }
+.col-6  { grid-column: span 6; }
+.col-7  { grid-column: span 7; }
+.col-8  { grid-column: span 8; }
+.col-9  { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+.cabecalho-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espaco-2);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-2);
+}
+
+.logo-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--cor-primaria);
+    margin: 0;
+}
+
+section {
+    margin-bottom: var(--espaco-5);
+    padding-bottom: var(--espaco-4);
+    border-bottom: 1px solid var(--cor-borda-suave);
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.hero {
+    align-items: center;
+}
+
+.hero-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espaco-1);
+}
+
+.hero-img {
+    border-radius: var(--raio-borda-md);
+    box-shadow: var(--sombra-card);
+    margin: 0;
+}
+
+.cabecalho-secao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espaco-2);
+    margin-bottom: var(--espaco-2);
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaco-1);
+}
+
+.rodape-conteudo p {
+    margin: 0;
+}

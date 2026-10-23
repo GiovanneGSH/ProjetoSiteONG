@@ -10,55 +10,109 @@
 <body>
 
     <header class="cabecalho-principal">
-        <div class="logo-container">            
-            <img src="./images/closeup-diverse-people-joining-their-hands.jpg" alt="Mãos dadas - Logo da ONG" class="logo-img">
-            <h1>Plataforma Solidária</h1>
+        <div class="container cabecalho-container">
+            <div class="logo-container">            
+                <img src="./images/closeup-diverse-people-joining-their-hands.jpg" alt="Mãos dadas - Logo da ONG" class="logo-img">
+                <h1>Plataforma Solidária</h1>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação">
+            <label for="menu-toggle" class="menu-hamburguer" aria-hidden="true">
+                <span class="hamburguer-linha"></span>
+                <span class="hamburguer-linha"></span>
+                <span class="hamburguer-linha"></span>
+            </label>
+
+            <nav class="navegacao" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li class="dropdown">
+                        <a href="#projetos" class="dropdown-link">Projetos <span class="seta-dropdown">&#9662;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#projetos">Educação para Todos</a></li>
+                            <li><a href="#projetos">Sopa Solidária</a></li>
+                            <li><a href="#voluntarios">Seja Voluntário</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#voluntarios">Voluntariado</a></li>
+                    <li><a href="#doacoes" class="btn-destaque">Doar</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="navegacao">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#voluntarios">Voluntariado</a></li>
-                <li><a href="#doacoes" class="btn-destaque">Doar</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section id="inicio" class="hero">
-            <div class="hero-conteudo">
+        <section id="inicio" class="hero grid-12">
+            <div class="hero-conteudo col-7">
+                <span class="badge badge-primario">Impacto Social 2026</span>
                 <h2>Transformando Vidas Juntos</h2>
                 <p>Junte-se a nós para fazer a diferença na nossa comunidade. Apoie nossos projetos, seja um voluntário ou contribua com recursos.</p>
-                <a href="#voluntarios" class="btn-primario">Junte-se à Causa</a>
+                <div class="grupo-botoes">
+                    <a href="#voluntarios" class="btn-primario">Junte-se à Causa</a>
+                    <a href="#projetos" class="btn-secundario">Conhecer Projetos</a>
+                </div>
             </div>
-            <img src="./images/team-volunteers-stacking-hands.jpg" alt="Voluntários juntos" class="hero-img">
+            <div class="hero-midia col-5">
+                <img src="./images/team-volunteers-stacking-hands.jpg" alt="Voluntários juntos" class="hero-img">
+            </div>
         </section>
 
         <section id="sobre" class="secao-texto">
-            <h2>Nossas Atividades</h2>
+            <div class="cabecalho-secao">
+                <h2>Nossas Atividades</h2>
+                <div class="grupo-tags">
+                    <span class="tag">#Educação</span>
+                    <span class="tag">#SaúdeComunitária</span>
+                    <span class="tag">#AssistênciaSocial</span>
+                </div>
+            </div>
             <p>Atuamos na educação, saúde e assistência social, promovendo o desenvolvimento sustentável e o bem-estar de famílias em situação de vulnerabilidade.</p>
+            
+            <div class="alerta alerta-info" role="status">
+                <strong>Transparência Ativa:</strong> Mais de 500 famílias foram atendidas diretamente pelas nossas frentes de atuação neste semestre.
+            </div>
         </section>
 
         <section id="projetos" class="secao-projetos">
             <h2>Nossos Projetos</h2>
-            <div class="grid-cards">
+            <div class="grid-cards grid-12">
                 
-                <article class="card">
-                    <img src="./images/jarmoluk-apple-256261.jpg" alt="sala de aula" class="card-img">
+                <article class="card col-6">
+                    <div class="card-cabecalho-img">
+                        <img src="./images/jarmoluk-apple-256261.jpg" alt="sala de aula" class="card-img">
+                        <span class="badge badge-educacao">Educação</span>
+                    </div>
                     <div class="card-conteudo">
+                        <div class="grupo-tags">
+                            <span class="tag">Crianças e Jovens</span>
+                            <span class="tag">Inclusão Digital</span>
+                        </div>
                         <h3>Educação para Todos</h3>
                         <p>Aulas de reforço escolar e inclusão digital para crianças e jovens.</p>
-                        <button type="button" class="btn-secundario">Saiba mais</button>
+                        <div class="card-rodape">
+                            <a href="#modal-educacao" class="btn-secundario">Saiba mais</a>
+                            <button type="button" class="btn-primario" disabled title="Vagas preenchidas para este mês">Turma Completa</button>
+                        </div>
                     </div>
                 </article>
 
-                <article class="card">
-                    <img src="./images/billycm-child-2635306.jpg" alt="Distribuição de alimentos" class="card-img">
+                <article class="card col-6">
+                    <div class="card-cabecalho-img">
+                        <img src="./images/billycm-child-2635306.jpg" alt="Distribuição de alimentos" class="card-img">
+                        <span class="badge badge-assistencia">Assistência Social</span>
+                    </div>
                     <div class="card-conteudo">
+                        <div class="grupo-tags">
+                            <span class="tag">Segurança Alimentar</span>
+                            <span class="tag">Ação Noturna</span>
+                        </div>
                         <h3>Sopa Solidária</h3>
                         <p>Distribuição de refeições nutritivas para pessoas em situação de rua.</p>
-                        <button type="button" class="btn-secundario">Saiba mais</button>
+                        <div class="card-rodape">
+                            <a href="#modal-sopa" class="btn-secundario">Saiba mais</a>
+                            <a href="#voluntarios" class="btn-primario">Participar</a>
+                        </div>
                     </div>
                 </article>
 
@@ -67,34 +121,98 @@
 
         <section id="voluntarios" class="secao-formulario">
             <h2>Engaje-se: Seja um Voluntário</h2>
-            <form action="#" method="POST" class="form-voluntario">
-                <div class="form-grupo">
+
+            <div class="alerta alerta-sucesso" role="note">
+                <strong>Inscrições Abertas:</strong> Preencha os campos obrigatórios abaixo para integrar nossa equipe de voluntariado.
+            </div>
+
+            <form action="#toast-confirmacao" method="GET" class="form-voluntario grid-12">
+                <div class="form-grupo col-6">
                     <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                    <input type="text" id="nome" name="nome" required minlength="3" placeholder="Digite seu nome">
+                    <span class="feedback-validacao">Informe seu nome completo (mínimo de 3 caracteres).</span>
                 </div>
                 
-                <div class="form-grupo">
+                <div class="form-grupo col-6">
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                    <span class="feedback-validacao">Insira um endereço de e-mail válido (ex: nome@dominio.com).</span>
                 </div>
 
-                <div class="form-grupo">
+                <div class="form-grupo col-12">
                     <label for="area">Área de Interesse:</label>
-                    <select id="area" name="area">
+                    <select id="area" name="area" required>
                         <option value="educacao">Educação</option>
                         <option value="saude">Saúde</option>
                         <option value="eventos">Eventos e Logística</option>
                     </select>
                 </div>
 
-                <button type="submit" class="btn-primario">Quero Ajudar</button>
+                <div class="form-acoes col-12">
+                    <button type="submit" class="btn-primario">Quero Ajudar</button>
+                    <button type="reset" class="btn-secundario">Limpar Dados</button>
+                </div>
             </form>
         </section>
     </main>
 
+    <div id="doacoes" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-doacoes">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h3 id="titulo-modal-doacoes">Apoie a Plataforma Solidária</h3>
+                <a href="#inicio" class="modal-fechar" aria-label="Fechar janela">&times;</a>
+            </div>
+            <p>Sua contribuição mantém nossas salas de aula abertas e garante refeições diárias para quem mais precisa.</p>
+            <div class="alerta alerta-sucesso">
+                <strong>Chave PIX Oficial (CNPJ):</strong> 00.000.000/0001-00
+            </div>
+            <div class="modal-rodape">
+                <a href="#voluntarios" class="btn-primario">Também Quero Ser Voluntário</a>
+                <a href="#inicio" class="btn-secundario">Fechar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-educacao" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-edu">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h3 id="titulo-modal-edu">Projeto: Educação para Todos</h3>
+                <a href="#projetos" class="modal-fechar" aria-label="Fechar janela">&times;</a>
+            </div>
+            <p>Atendemos 120 crianças e adolescentes no contraturno escolar com oficinas de leitura, matemática aplicada e lógica de programação.</p>
+            <div class="modal-rodape">
+                <a href="#voluntarios" class="btn-primario">Inscrever-se como Monitor</a>
+                <a href="#projetos" class="btn-secundario">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-sopa" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-sopa">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h3 id="titulo-modal-sopa">Projeto: Sopa Solidária</h3>
+                <a href="#projetos" class="modal-fechar" aria-label="Fechar janela">&times;</a>
+            </div>
+            <p>Ações realizadas todas as terças e quintas-feiras, com preparo colaborativo de refeições balanceadas e entrega de kits de higiene.</p>
+            <div class="modal-rodape">
+                <a href="#voluntarios" class="btn-primario">Apoiar na Logística</a>
+                <a href="#projetos" class="btn-secundario">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-confirmacao" class="toast" role="alert">
+        <div class="toast-corpo">
+            <strong>Cadastro recebido com sucesso!</strong> Em breve nossa equipe entrará em contato pelo e-mail informado.
+        </div>
+        <a href="#voluntarios" class="toast-fechar" aria-label="Fechar notificação">&times;</a>
+    </div>
+
     <footer class="rodape">
-        <p>&copy; 2026 Plataforma Solidária ONG. Todos os direitos reservados.</p>
-        <p>Contato: contato@ongsolidaria.org.br | (11) 99999-9999</p>
+        <div class="container rodape-conteudo">
+            <p>&copy; 2026 Plataforma Solidária ONG. Todos os direitos reservados.</p>
+            <p>Contato: contato@ongsolidaria.org.br | (11) 99999-9999</p>
+        </div>
     </footer>
 
 </body>
